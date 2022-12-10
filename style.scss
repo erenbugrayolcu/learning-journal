@@ -87,6 +87,10 @@ html,body{
                 p{
                     line-height: 20px;
                 }
+
+                h1{
+                    max-height: 100px;
+                }
             }
         }
     
@@ -101,11 +105,12 @@ html,body{
             color: #fff;
 
             .grid{
+                height: 100%;
                 display: grid;
                 grid-template-columns: 309px 309px 309px;
                 grid-template-rows: 393px 393px;
-                padding: 53px;
                 grid-gap: 26px;
+                padding: 53px 0;
                 justify-content: center;
                 align-items: center;
 
@@ -182,6 +187,7 @@ html,body{
 
 @media (max-width: 690px){
     html,body{
+        
         .box{
             .header{
 
@@ -189,6 +195,44 @@ html,body{
 
             .first-topic{
 
+            }
+
+            .catalog{
+                height: auto;
+                padding-bottom: 50px;
+                .grid{
+                    grid-template-columns: 309px;
+                    grid-template-rows: repeat(393px 393px 393px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px){
+    html,body{
+
+        .box{
+            .header{
+
+            }
+
+            .first-topic{
+                .text{
+                    margin-left: 20px;
+                    p{
+                        margin-top: -70px;
+                    }
+
+                    h1{
+                        margin-top: 5px;
+                    }
+
+                    .desc{
+                        margin-top: 50px;
+                    }
+                }
+                
             }
 
             .catalog{

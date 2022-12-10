@@ -82,6 +82,9 @@ html .box .first-topic .text, body .box .first-topic .text {
 html .box .first-topic .text p, body .box .first-topic .text p {
   line-height: 20px;
 }
+html .box .first-topic .text h1, body .box .first-topic .text h1 {
+  max-height: 100px;
+}
 html .box .catalog, body .box .catalog {
   max-width: 100%;
   height: 985px;
@@ -93,11 +96,12 @@ html .box .catalog, body .box .catalog {
   color: #fff;
 }
 html .box .catalog .grid, body .box .catalog .grid {
+  height: 100%;
   display: grid;
   grid-template-columns: 309px 309px 309px;
   grid-template-rows: 393px 393px;
-  padding: 53px;
   grid-gap: 26px;
+  padding: 53px 0;
   justify-content: center;
   align-items: center;
 }
@@ -148,6 +152,28 @@ html .box .footer, body .box .footer {
   }
 }
 @media (max-width: 690px) {
+  html .box .catalog, body .box .catalog {
+    height: auto;
+    padding-bottom: 50px;
+  }
+  html .box .catalog .grid, body .box .catalog .grid {
+    grid-template-columns: 309px;
+    grid-template-rows: repeat(393px 393px 393px);
+  }
+}
+@media (max-width: 420px) {
+  html .box .first-topic .text, body .box .first-topic .text {
+    margin-left: 20px;
+  }
+  html .box .first-topic .text p, body .box .first-topic .text p {
+    margin-top: -70px;
+  }
+  html .box .first-topic .text h1, body .box .first-topic .text h1 {
+    margin-top: 5px;
+  }
+  html .box .first-topic .text .desc, body .box .first-topic .text .desc {
+    margin-top: 50px;
+  }
   html .box .catalog, body .box .catalog {
     height: auto;
     padding-bottom: 50px;
